@@ -1,0 +1,15 @@
+{
+  "name": "find-hanzi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "author": "Pepe Becker <mail@pepebecker.com> (http://pepebecker.com)",
+  "license": "ISC",
+  "dependencies": {
+    "detect-node": "^2.0.3",
+    "pinyin-utils": "git+https://git@github.com/pepebecker/pinyin-utils.git"
+  }
+}
