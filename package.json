@@ -18,7 +18,7 @@
   "homepage": "https://github.com/pepebecker/find-hanzi#readme",
   "dependencies": {
     "detect-node": "^2.0.3",
-    "pinyin-utils": "https://github.com/pepebecker/pinyin-utils.git"
+    "pinyin-utils": "pepebecker/pinyin-utils"
   },
   "devDependencies": {
     "mocha": "^3.3.0",
