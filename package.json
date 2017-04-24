@@ -6,8 +6,16 @@
   "scripts": {
     "test": "node test/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepebecker/find-hanzi.git"
+  },
   "author": "Pepe Becker <mail@pepebecker.com> (http://pepebecker.com)",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pepebecker/find-hanzi/issues"
+  },
+  "homepage": "https://github.com/pepebecker/find-hanzi#readme",
   "dependencies": {
     "detect-node": "^2.0.3",
     "pinyin-utils": "git+https://git@github.com/pepebecker/pinyin-utils.git"
