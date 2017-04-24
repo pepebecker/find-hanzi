@@ -2,8 +2,20 @@
 
 const findHanzi = require('../index')
 
-findHanzi('HQI', {fuzzy: false, definition: false, results: 3}).then((data) => {
-	for (let item of data) {
-		console.log('%s: %s, %s', item.hanzi, item.pinyin, item.definition)
-	}
-}, console.log)
+describe('Get character from cangjie code', () => {
+	it('should return 我', () => {
+		return findHanzi('HQI', {fuzzy: false, definition: false, results: 3}).then((data) => {
+			data.length.should.equal(1)
+			data[0].hanzi.should.equal('我')
+		})
+	})
+})
+
+describe('Get pinyin from character', () => {
+	it('should return wǒ', () => {
+		return findHanzi('我', {fuzzy: false, definition: false, results: 3}).then((data) => {
+			data.length.should.equal(1)
+			data[0].pinyin.should.equal('wǒ')
+		})
+	})
+})

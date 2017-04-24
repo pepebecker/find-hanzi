@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test/index.js"
+    "test": "mocha -w"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,9 @@
   "dependencies": {
     "detect-node": "^2.0.3",
     "pinyin-utils": "git+https://git@github.com/pepebecker/pinyin-utils.git"
+  },
+  "devDependencies": {
+    "mocha": "^3.3.0",
+    "should": "^11.2.1"
   }
 }
