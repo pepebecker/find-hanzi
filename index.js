@@ -23,6 +23,17 @@ const onLine = (line, query, options, foundMatch) => {
 		frequency: params[5]
 	}
 
+	if (options.multiple) {
+		for (let i in matches) {
+			if (matches[i] && matches[i].item === undefined) {
+				if (matches[i].input === item.hanzi) {
+					matches[i].item = item
+				}
+			}
+		}
+		return
+	}
+
 	if (options.search) {
 		if (item.definition.match(new RegExp('\\b(' + query + ')\\b'))) {
 			matches.push(item)
@@ -45,6 +56,11 @@ const onLine = (line, query, options, foundMatch) => {
 }
 
 const onDone = (options, yay, nay) => {
+	if (options.multiple) {
+		matches = matches.map((match) => match.item || match.input)
+		yay && yay(matches)
+		return
+	}
 	if (matches.length > 0) {
 		matches = matches.map((match) => {
 			let code = match.cangjie.split('')
@@ -78,6 +94,10 @@ const loadData = (done) => {
 }
 
 const find = (query, options = {}) => new Promise((yay, nay) => {
+	if (options.multiple) {
+		matches = query.split('').map((input) => ({input}))
+	}
+
 	if (isNode) {
 		const rl = readline.createInterface({
 			input: fs.createReadStream(path.join(__dirname, './data.txt'))
