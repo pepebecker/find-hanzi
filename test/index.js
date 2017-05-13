@@ -19,13 +19,3 @@ describe('Get pinyin from character', () => {
 		})
 	})
 })
-
-describe('Get multiple characters', () => {
-	it('should return list of characters', () => {
-		return findHanzi('我 的猫喜欢喝牛奶', {multiple: true}).then((data) => {
-			data = data.map((item) => item.pinyin || item)
-			const py = ['wǒ', ' ', 'de', 'māo', 'xǐ', 'huān', 'hē', 'niú', 'nǎi']
-			data.should.deepEqual(py)
-		})
-	})
-})

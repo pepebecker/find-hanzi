@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "mkdir-data": "mkdir -p data",
+    "download": "curl -sL www.unicode.org/Public/UNIDATA/Unihan.zip > build/Unihan.zip",
+    "unzip": "unzip -n -d build/Unihan build/Unihan.zip",
+    "setup": "npm run download && npm run unzip && mkdir -p data",
+    "build": "node build/build.js",
+    "cleanup": "rm -rf build/Unihan build/Unihan.zip data"
   },
   "repository": {
     "type": "git",
@@ -18,9 +24,12 @@
   "homepage": "https://github.com/pepebecker/find-hanzi#readme",
   "dependencies": {
     "detect-node": "^2.0.3",
-    "pinyin-utils": "pepebecker/pinyin-utils"
+    "pinyin-utils": "pepebecker/pinyin-utils",
+    "request": "^2.81.0",
+    "unzip": "^0.1.11"
   },
   "devDependencies": {
+    "lodash": "^4.17.4",
     "mocha": "^3.3.0",
     "should": "^11.2.1"
   }
