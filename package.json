@@ -25,12 +25,12 @@
   "homepage": "https://github.com/pepebecker/find-hanzi#readme",
   "dependencies": {
     "detect-node": "^2.0.3",
+    "lodash": "^4.17.4",
     "pinyin-utils": "pepebecker/pinyin-utils",
     "request": "^2.81.0",
     "unzip": "^0.1.11"
   },
   "devDependencies": {
-    "lodash": "^4.17.4",
     "mocha": "^3.3.0",
     "should": "^11.2.1"
   }

@@ -1,3 +1,5 @@
+'use strict'
+
 const readline = require('readline')
 const fs = require('fs')
 const pickBy = require('lodash/pickBy')
