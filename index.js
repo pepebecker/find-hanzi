@@ -22,8 +22,9 @@ const find = (query, options = {}) => new Promise((yay, nay) => {
 		const pinyin = hanzi2pinyin[hanzi]
 		const cangjie2 = cangjie.split('').map((c) => cangjie2radicals[c]).join('')
 		const strokes = hanzi2strokes[hanzi]
+		const frequency = hanzi2frequency[hanzi]
 		const definition = hanzi2definition[hanzi]
-		yay([{hanzi, pinyin, cangjie, cangjie2, strokes, definition}])
+		yay([{hanzi, pinyin, cangjie, cangjie2, strokes, frequency, definition}])
 		return
 	}
 
@@ -33,8 +34,9 @@ const find = (query, options = {}) => new Promise((yay, nay) => {
 		const pinyin = hanzi2pinyin[hanzi]
 		const cangjie2 = cangjie.split('').map((c) => cangjie2radicals[c]).join('')
 		const strokes = hanzi2strokes[hanzi]
+		const frequency = hanzi2frequency[hanzi]
 		const definition = hanzi2definition[hanzi]
-		yay([{hanzi, pinyin, cangjie, cangjie2, strokes, definition}])
+		yay([{hanzi, pinyin, cangjie, cangjie2, strokes, frequency, definition}])
 		return
 	}
 
@@ -47,10 +49,11 @@ const find = (query, options = {}) => new Promise((yay, nay) => {
 			const pinyin = hanzi2pinyin[hanzi] || utils.numberToMark(query)
 			const cangjie2 = cangjie.split('').map((c) => cangjie2radicals[c]).join('')
 			const strokes = hanzi2strokes[hanzi]
+			const frequency = hanzi2frequency[hanzi] || 9
 			const definition = hanzi2definition[hanzi]
-			list.push({hanzi, pinyin, cangjie, cangjie2, strokes, definition})
+			list.push({hanzi, pinyin, cangjie, cangjie2, strokes, frequency, definition})
 		}
-		yay(list)
+		yay(list.sort((a, b) => a.frequency - b.frequency))
 		return
 	}
 	
