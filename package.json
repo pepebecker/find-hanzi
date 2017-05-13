@@ -10,7 +10,8 @@
     "unzip": "unzip -n -d build/Unihan build/Unihan.zip",
     "setup": "npm run download && npm run unzip && mkdir -p data",
     "build": "node build/build.js",
-    "cleanup": "rm -rf build/Unihan build/Unihan.zip data"
+    "cleanup": "rm -rf build/Unihan build/Unihan.zip data",
+    "install": "npm run build"
   },
   "repository": {
     "type": "git",
