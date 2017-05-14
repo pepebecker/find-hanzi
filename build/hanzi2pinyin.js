@@ -12,6 +12,13 @@ const rl = readline.createInterface({
 	input: fs.createReadStream('build/Unihan/Unihan_Readings.txt')
 })
 
+function removeDuplicates(a) {
+    var seen = {}
+    return a.filter(function(item) {
+        return seen.hasOwnProperty(item) ? false : (seen[item] = true)
+    })
+}
+
 rl.on('line', (line) => {
 
 	if (line == "" || /^#/.test(line)) {
@@ -29,9 +36,12 @@ rl.on('line', (line) => {
 
 	data[codepoint] = data[codepoint] || {hanzi}
 
-	if (key === 'kHanyuPinyin') {
-		const pinyin = value.split(':')[1]
-		data[codepoint].pinyin = pinyin.split(',')
+	if (key === 'kHanyuPinyin' || (key === 'kXHC1983' && !data[codepoint].pinyin)) {
+		let pinyin = value.split(' ')
+		pinyin = pinyin.map((p) => p.split(':')[1].split(','))
+		pinyin = [].concat.apply([], pinyin)
+		pinyin = removeDuplicates(pinyin)
+		data[codepoint].pinyin = pinyin
 	}
 
 	if (key === 'kDefinition') {
