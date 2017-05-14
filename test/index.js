@@ -15,7 +15,7 @@ describe('Get pinyin from character', () => {
 	it('should return wǒ', () => {
 		return findHanzi('我').then((data) => {
 			data.length.should.equal(1)
-			data[0].pinyin.should.equal('wǒ')
+			data[0].pinyin.should.deepEqual(['wǒ'])
 		})
 	})
 })
