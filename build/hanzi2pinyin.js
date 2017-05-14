@@ -44,6 +44,13 @@ rl.on('line', (line) => {
 		data[codepoint].pinyin = pinyin
 	}
 
+	if (key === 'kMandarin') {
+		let pinyin = data[codepoint].pinyin || []
+		pinyin.unshift(value)
+		pinyin = removeDuplicates(pinyin)
+		data[codepoint].pinyin = pinyin
+	}
+
 	if (key === 'kDefinition') {
 		data[codepoint].definition = value
 	}
