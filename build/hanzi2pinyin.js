@@ -30,14 +30,8 @@ rl.on('line', (line) => {
 	data[codepoint] = data[codepoint] || {hanzi}
 
 	if (key === 'kHanyuPinyin') {
-		let pinyin = value.split(':')[1]
-		pinyin = pinyin.split(',')
-
-		if (pinyin.length === 1) {
-			pinyin = pinyin[0]
-		}
-
-		data[codepoint].pinyin = pinyin
+		const pinyin = value.split(':')[1]
+		data[codepoint].pinyin = pinyin.split(',')
 	}
 
 	if (key === 'kDefinition') {
