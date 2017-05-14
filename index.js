@@ -57,7 +57,7 @@ const find = (query, options = {}) => new Promise((yay, nay) => {
 		return
 	}
 	
-	nay('Unrecognized input type')
+	yay([])
 })
 
 module.exports = find
