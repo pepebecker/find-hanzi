@@ -21,35 +21,37 @@ const findHanzi = require('find-hanzi')
 findHanzi('我')
 .then(console.log)
 .catch(console.error)
-// Output:
-// [
-//   {
-//     hanzi: '我',
-//     pinyin: ['wǒ'],
-//     cangjie: 'HQI',
-//     cangjie2: '竹手戈',
-//     strokes: '7',
-//     frequency: '1',
-//     definition: 'our, us, i, me, my, we'
-//   }
-// ]
+// [ {
+//   hanzi: '我',
+//   pinyin: ['wǒ'],
+//   cangjie: 'HQI',
+//   cangjie2: '竹手戈',
+//   strokes: '7',
+//   frequency: '1',
+//   definition: 'our, us, i, me, my, we'
+// } ]
 
 findHanzi('AMYO')
 .then(console.log)
 .catch(console.error)
-// Output:
-// [
-//   {
-//     hanzi: '是',
-//     pinyin: ['shì', 'tí'],
-//     cangjie: 'AMYO',
-//     cangjie2: '日一卜人',
-//     strokes: '9',
-//     frequency: '1',
-//     definition: 'indeed, yes, right; to be; demonstrative pronoun, this, that'
-//   }
-// ]
+// [ {
+//   hanzi: '是',
+//   pinyin: ['shì', 'tí'],
+//   cangjie: 'AMYO',
+//   cangjie2: '日一卜人',
+//   strokes: '9',
+//   frequency: '1',
+//   definition: 'indeed, yes, right; to be; demonstrative pronoun, this, that'
+// } ]
 ```
+
+## Related
+
+- [`pinyin-utils`](https://github.com/pepebecker/pinyin-utils)
+- [`pinyin-split`](https://github.com/pepebecker/pinyin-split)
+- [`pinyin-or-hanzi`](https://github.com/pepebecker/pinyin-or-hanzi)
+- [`hanzi-to-pinyin`](https://github.com/pepebecker/hanzi-to-pinyin)
+- [`pinyin-converter`](https://github.com/pepebecker/pinyin-converter)
 
 ## Contributing
 
