@@ -36,7 +36,7 @@
   "dependencies": {
     "detect-node": "^2.0.3",
     "lodash": "^4.17.4",
-    "pinyin-utils": "pepebecker/pinyin-utils",
+    "pinyin-utils": "^1.0.2",
     "request": "^2.81.0",
     "unzip": "^0.1.11"
   },
