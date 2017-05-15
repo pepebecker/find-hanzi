@@ -3,6 +3,10 @@
   "version": "1.0.2",
   "description": "Get some information about one or more characters.",
   "main": "index.js",
+  "files": [
+    "data",
+    "cangjie.json"
+  ],
   "scripts": {
     "test": "mocha",
     "cover": "istanbul cover _mocha",
@@ -11,9 +15,8 @@
     "download": "curl -sL www.unicode.org/Public/UNIDATA/Unihan.zip > build/Unihan.zip",
     "unzip": "unzip -n -d build/Unihan build/Unihan.zip",
     "setup": "npm run download && npm run unzip && mkdir -p data",
-    "build": "node build/build.js",
     "cleanup": "rm -rf build/Unihan build/Unihan.zip data",
-    "install": "npm run build"
+    "build": "node build/build.js"
   },
   "repository": {
     "type": "git",
