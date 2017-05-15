@@ -1,7 +1,7 @@
 {
   "name": "find-hanzi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Get some information about one or more characters.",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
@@ -19,8 +19,16 @@
     "type": "git",
     "url": "https://github.com/pepebecker/find-hanzi.git"
   },
+  "keywords": [
+    "find",
+    "hanzi",
+    "pinyin",
+    "cangjie",
+    "chinese",
+    "mandarin"
+  ],
   "author": "Pepe Becker <mail@pepebecker.com> (http://pepebecker.com)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/pepebecker/find-hanzi/issues"
   },
