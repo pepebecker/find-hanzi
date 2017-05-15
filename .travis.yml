@@ -6,5 +6,12 @@ node_js:
 script:
   - npm run build
   - npm test
+deploy:
+  provider: npm
+  skip_cleanup: true
+  email: "mail@pepebecker.com"
+  api_key: $TRAVIS_API_KEY
+  on:
+    branch: master
 after_success:
   - npm run coveralls
