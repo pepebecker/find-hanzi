@@ -10,7 +10,7 @@
 ## Install
 
 ```shell
-npm install find-hanzi@pepebecker/find-hanzi
+npm install find-hanzi
 ```
 
 ## Usage
