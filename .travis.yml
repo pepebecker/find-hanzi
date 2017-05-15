@@ -8,6 +8,8 @@ script:
   - npm test
 after_success:
   - npm run coveralls
+  - git config user.email "mail@pepebecker.com"
+  - git config user.name "Pepe Becker"
   - npm version patch
 deploy:
   provider: npm
