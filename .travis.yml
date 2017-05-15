@@ -6,6 +6,9 @@ node_js:
 script:
   - npm run build
   - npm test
+after_success:
+  - npm run coveralls
+  - npm version patch
 deploy:
   provider: npm
   skip_cleanup: true
@@ -13,5 +16,4 @@ deploy:
   api_key: $TRAVIS_API_KEY
   on:
     branch: master
-after_success:
-  - npm run coveralls
+    node: latest
