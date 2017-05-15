@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "mkdir-data": "mkdir -p data",
     "download": "curl -sL www.unicode.org/Public/UNIDATA/Unihan.zip > build/Unihan.zip",
     "unzip": "unzip -n -d build/Unihan build/Unihan.zip",
@@ -31,7 +33,10 @@
     "unzip": "^0.1.11"
   },
   "devDependencies": {
+    "coveralls": "^2.13.1",
+    "istanbul": "^0.4.5",
     "mocha": "^3.3.0",
+    "mocha-lcov-reporter": "^1.3.0",
     "should": "^11.2.1"
   }
 }
