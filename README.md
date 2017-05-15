@@ -1,5 +1,6 @@
 # Find Hanzi
 
+[![npm version](https://img.shields.io/npm/v/find-hanzi.svg)](https://www.npmjs.com/package/find-hanzi)
 [![Travis Build Status](https://travis-ci.org/pepebecker/find-hanzi.svg)](https://travis-ci.org/pepebecker/find-hanzi)
 [![Coverage Status](https://coveralls.io/repos/github/pepebecker/find-hanzi/badge.svg)](https://coveralls.io/github/pepebecker/find-hanzi)
 [![dependency status](https://img.shields.io/david/pepebecker/find-hanzi.svg)](https://david-dm.org/pepebecker/find-hanzi)
