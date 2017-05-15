@@ -18,4 +18,4 @@ deploy:
   api_key: $TRAVIS_API_KEY
   on:
     branch: master
-    node: latest
+    node: stable
