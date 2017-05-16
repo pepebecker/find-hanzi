@@ -1,21 +1,19 @@
 language: node_js
 node_js:
-  - "stable"
-  - "7"
-  - "6"
+- stable
+- '7'
+- '6'
 script:
-  - npm run build
-  - npm test
+- npm run build
+- npm test
 after_success:
-  - npm run coveralls
-  - git config user.email "mail@pepebecker.com"
-  - git config user.name "Pepe Becker"
-  - npm version patch
+- npm run coveralls
 deploy:
   provider: npm
-  skip_cleanup: true
-  email: "mail@pepebecker.com"
-  api_key: $TRAVIS_API_KEY
+  email: mail@pepebecker.com
+  api_key:
+    secure: PaMJpZvjG5gxevYFPk+j0NzboTanfaZOTQYhPORkwcoo4ePBAKIyZeZUy7x5+JY+8F4KBtlM7YvjkPmVErYf0soFsupx0MnlNttvV1Pq1cXgooyRW+QsyPeX+SxOEHmL/rYLqMZNbkMvBERZUZpasULrLM4nVwhcq+L6ArvZUfVXCwrX1fMvvRhjIlmr2ikXUP4Si3yT0pUb92NKoxiIwbbJ/RULaFA1iuGoeVj9qJK3cIhZW9c4QQYsiiakru701YMIWSCS/OqNI84qL1ECvRykIIdpFSKdRWgzDnhQBbnDwOxlzP0OA+azacnwBIccuYVVfhTucRrvJdN8ff2paQ9XAcRL9frZLts34qTcPmkSDpfUBdd4Hixors1ZgJhVhc0O4YjMoU4eH+QjabU25+xwBjHCN1mvBvD+gtm5vkH05joeKErj2Wl1/Iy0uzDh5qymbIjzE1gGEmcC+NHaiSx5fb72Yw1ng6wwFNTjLOzFOexRbKu53JolXVKXKVzWnOUWKwC1CWkQ9wZp6K5mYpZm3Qmovpkx4RDIcfe59EDlBzP6NeXcsXLShXNbUppvjhUe1PwZmeOhdcMUdIIFJMS/RwTJgu6dru8Gh3xWnMBAh0a8p2WOSaeJ5IZDOe1k7bu7kqKG45KEJBLDbEB2ee83Eat9D/8RMCIDYHEqjOc=
   on:
+    repo: pepebecker/find-hanzi
     branch: master
     node: stable
