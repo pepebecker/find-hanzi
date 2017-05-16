@@ -11,7 +11,7 @@ after_success:
 - git config user.email "mail@pepebecker.com"
 - git config user.name "Pepe Becker"
 - npm version patch
-- git remote -d origin
+- git remote rm origin
 - git remote add origin https://${GH_TOKEN}@github.com/pepebecker/find-hanzi.git
 - git push --quiet --set-upstream origin master
 deploy:
