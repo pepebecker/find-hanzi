@@ -1,13 +1,13 @@
 'use strict'
 
 const cangjie2radicals	= require('./cangjie.json')
-const cangjie2hanzi			= require('./data/cangjie2hanzi.json')
-const hanzi2cangjie			= require('./data/hanzi2cangjie.json')
+const cangjie2hanzi		= require('./data/cangjie2hanzi.json')
+const hanzi2cangjie		= require('./data/hanzi2cangjie.json')
 const hanzi2definition	= require('./data/hanzi2definition.json')
-const hanzi2frequency		= require('./data/hanzi2frequency.json')
-const hanzi2pinyin			= require('./data/hanzi2pinyin.json')
-const hanzi2strokes			= require('./data/hanzi2strokes.json')
-const pinyin2hanzi			= require('./data/pinyin2hanzi.json')
+const hanzi2frequency	= require('./data/hanzi2frequency.json')
+const hanzi2pinyin		= require('./data/hanzi2pinyin.json')
+const hanzi2strokes		= require('./data/hanzi2strokes.json')
+const pinyin2hanzi		= require('./data/pinyin2hanzi.json')
 
 const utils = require('pinyin-utils')
 
