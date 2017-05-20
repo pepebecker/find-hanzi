@@ -8,12 +8,6 @@ script:
 - npm test
 after_success:
 - npm run coveralls
-- git config user.email "mail@pepebecker.com"
-- git config user.name "Pepe Becker"
-- npm version patch
-- git remote rm origin
-- git remote add origin https://${GH_TOKEN}@github.com/pepebecker/find-hanzi.git
-- git push --quiet --set-upstream origin master
 deploy:
   provider: npm
   email: mail@pepebecker.com
@@ -23,6 +17,3 @@ deploy:
   on:
     branch: master
     node: stable
-env:
-  global:
-    secure: TqtnqGjAjSY4y8q+wtE56IfU+OBvIlJKb6fbfBtJp2v2r3VO0XjS6fVVn/xhEMDRu/aBRQ11RC1EHRTdhZ1oO9AXXJE4p3l1oazneOJOUkyXniG8sfT67EjUoWcWH7IX5GzqIHmlEst/55Mvjkw1qwJGzH25mnWHgHBDZeWZgEX6dB/+P7+/RZA2wwlD+LMK9EQjYzJZiqY1bmogRDvqWf7pyGp8OAFsSszKoCDRwxKbpSYevHp0oKaaxwgZ9MC/J2ONP7OObjy/hzXXm4UuqKBFdk4R1kkG5R5w9FkO6skYQzHvOIikrEpoBAtVnAJEYzt3zt0ouNmg/FbKutkUb9A2e+rsVQ4De1grBCI13FZ90wT3lmbApzCKWjsyODczoWiR1lLwCJANCepLYMcxwnN0qFpxb2qpO5AgYFzigw+5cVBCjh6OPFsf/3CeWmYWj1GBtPqZEQeGJe3sXtgAVvSScUBe5llLSue79U+9ujqh7vlJLvBzPgm5WNoFndhtbgcc0Iqs3zarHPyNNGMYjtZEQD8Wu2SjiRy0fHgQn64QgbToeXdLoVhxG2045obllquNi/lH0zfb6Cv2VKzFatNy8tpHdDvt1MatTe2zjALAa0MGx4IaQyiltad/sY1bW+0lJ6Ow10SK4GM7CwxckeC9cHaYWkYZL1HKt3EZgMI=
