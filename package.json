@@ -40,6 +40,8 @@
   },
   "devDependencies": {
     "coveralls": "^2.13.1",
+    "fs.realpath": "^1.0.0",
+    "has-flag": "^2.0.0",
     "istanbul": "^0.4.5",
     "lodash": "^4.17.4",
     "mocha": "^3.3.0",
