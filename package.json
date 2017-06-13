@@ -11,7 +11,6 @@
     "test": "mocha",
     "cover": "istanbul cover _mocha",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
-    "mkdir-data": "mkdir -p data",
     "download": "curl -sL www.unicode.org/Public/UNIDATA/Unihan.zip > build/Unihan.zip",
     "unzip": "unzip -n -d build/Unihan build/Unihan.zip",
     "setup": "npm run download && npm run unzip && mkdir -p data",
@@ -36,9 +35,7 @@
     "url": "https://github.com/pepebecker/find-hanzi/issues"
   },
   "homepage": "https://github.com/pepebecker/find-hanzi#readme",
-  "dependencies": {
-    "pinyin-utils": "^1.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "coveralls": "^2.13.1",
     "istanbul": "^0.4.5",
