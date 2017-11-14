@@ -24,9 +24,10 @@ findHanzi('我')
 .catch(console.error)
 // [ {
 //   hanzi: '我',
-//   pinyin: ['wǒ'],
-//   cangjie: 'HQI',
-//   cangjie2: '竹手戈',
+//   pinyin: 'wǒ',
+//   pinyinList: ['wǒ'],
+//   cangjie: '竹手戈',
+//   cangjieRomanized: 'HQI',
 //   strokes: '7',
 //   frequency: '1',
 //   definition: 'our, us, i, me, my, we'
@@ -37,9 +38,10 @@ findHanzi('AMYO')
 .catch(console.error)
 // [ {
 //   hanzi: '是',
-//   pinyin: ['shì', 'tí'],
-//   cangjie: 'AMYO',
-//   cangjie2: '日一卜人',
+//   pinyin: 'shì, tí',
+//   pinyinList: ['shì', 'tí'],
+//   cangjie: '日一卜人',
+//   cangjieRomanized: 'AMYO',
 //   strokes: '9',
 //   frequency: '1',
 //   definition: 'indeed, yes, right; to be; demonstrative pronoun, this, that'

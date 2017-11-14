@@ -27,7 +27,7 @@ const buildCharacterData = (hanzi, cangjie, cangjieRomanized) => {
     const pinyinList = hanzi2pinyin[hanzi]
     const pinyin = pinyinList.join(', ')
     const strokes = hanzi2strokes[hanzi]
-    const frequency = hanzi2frequency[hanzi]
+    const frequency = hanzi2frequency[hanzi] || 100
     const definition = hanzi2definition[hanzi]
     return {
         hanzi,
