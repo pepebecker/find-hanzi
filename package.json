@@ -1,6 +1,6 @@
 {
   "name": "find-hanzi",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Get some information about one or more characters.",
   "main": "index.js",
   "files": [
