@@ -1,5 +1,6 @@
 'use strict'
 
+const cangjie2radical = require('../cangjie.json')
 const readline = require('readline')
 const fs = require('fs')
 const mapValues = require('lodash/mapValues')
@@ -13,7 +14,7 @@ const rl = readline.createInterface({
 
 rl.on('line', (line) => {
 
-    if (line == "" || /^#/.test(line)) {
+    if (line == '' || /^#/.test(line)) {
         return
     }
 
@@ -29,7 +30,12 @@ rl.on('line', (line) => {
     data[codepoint] = data[codepoint] || {hanzi}
 
     if (key === 'kCangjie') {
-        data[codepoint].cangjie = value
+        let cangjie = ''
+        for (var i = 0; i < value.length; i++) {
+            const char = value[i]
+            cangjie += cangjie2radical[char]
+        }
+        data[codepoint].cangjie = cangjie
     }
 })
 

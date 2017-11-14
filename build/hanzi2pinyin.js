@@ -21,7 +21,7 @@ const removeDuplicates = (array) => {
 
 rl.on('line', (line) => {
 
-    if (line == "" || /^#/.test(line)) {
+    if (line == '' || /^#/.test(line)) {
         return
     }
 
