@@ -1,10 +1,9 @@
 # Find Hanzi
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/pepebecker/find-hanzi.svg)](https://greenkeeper.io/)
-
 [![npm version](https://img.shields.io/npm/v/find-hanzi.svg)](https://www.npmjs.com/package/find-hanzi)
 [![Travis Build Status](https://travis-ci.org/pepebecker/find-hanzi.svg)](https://travis-ci.org/pepebecker/find-hanzi)
 [![Coverage Status](https://coveralls.io/repos/github/pepebecker/find-hanzi/badge.svg)](https://coveralls.io/github/pepebecker/find-hanzi)
+[![Greenkeeper badge](https://badges.greenkeeper.io/pepebecker/find-hanzi.svg)](https://greenkeeper.io/)
 [![dependency status](https://img.shields.io/david/pepebecker/find-hanzi.svg)](https://david-dm.org/pepebecker/find-hanzi)
 [![dev dependency status](https://img.shields.io/david/dev/pepebecker/find-hanzi.svg)](https://david-dm.org/pepebecker/find-hanzi#info=devDependencies)
 [![MIT-licensed](https://img.shields.io/github/license/pepebecker/find-hanzi.svg)](https://opensource.org/licenses/MIT)
