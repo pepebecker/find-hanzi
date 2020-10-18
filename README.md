@@ -6,7 +6,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/pepebecker/find-hanzi.svg)](https://greenkeeper.io/)
 [![dependency status](https://img.shields.io/david/pepebecker/find-hanzi.svg)](https://david-dm.org/pepebecker/find-hanzi)
 [![dev dependency status](https://img.shields.io/david/dev/pepebecker/find-hanzi.svg)](https://david-dm.org/pepebecker/find-hanzi#info=devDependencies)
-[![MIT-licensed](https://img.shields.io/github/license/pepebecker/find-hanzi.svg)](https://opensource.org/licenses/MIT)
+[![ISC-licensed](https://img.shields.io/github/license/pepebecker/find-hanzi.svg)](https://choosealicense.com/licenses/isc/)
 [![chat on gitter](https://badges.gitter.im/pepebecker.svg)](https://gitter.im/pepebecker)
 
 ## Install
